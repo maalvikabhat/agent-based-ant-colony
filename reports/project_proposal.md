@@ -25,8 +25,11 @@ The authors of this paper utilize a MIRROR agent-based model in order to achieve
 
 We will create a similar graph of estimates of the mean and standard deviation of recruitment time, the duration of a round-trip recruitment journey, as a function of the
 number of recruitment journeys so far undertaken. This will help us ensure we are on the correct track and translating the parameters accurately.
+
 ![image](https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/normalizednest.PNG)
+
 Next, we will plot the probability of a recruiter performing a transport rather than a tandem run, as a function of the number of workers at the new site on her immediately previous visit there. The worker numbers are normalized by dividing by total colony population. 
+
 ![image](https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/recnumber.PNG)
 
 
