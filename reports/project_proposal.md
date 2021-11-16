@@ -34,7 +34,7 @@ Next, we will plot the probability of a recruiter performing a transport rather 
 
 We will create a plot that identifies the different stages the ants are at with different symbols and a legend. It should look something like this.
 
-![image](https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/253176697_2983341461929021_3787379295825093977_n.jpg)
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/253176697_2983341461929021_3787379295825093977_n.jpg" width="100" height="100">
 
 Finally, we will create a simulation with ants moving around a square to demonstrate the emigration process visually. 
 
