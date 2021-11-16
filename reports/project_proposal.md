@@ -38,7 +38,7 @@ We will create a plot that identifies the different stages the ants are at with 
 
 Finally, we will create a simulation with ants moving around a square to demonstrate the emigration process visually. 
 
-![image](https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/256168034_956707494925267_2335244230622024383_n.jpg)
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/256168034_956707494925267_2335244230622024383_n.jpg" width="400" height="550">
 
 
 ### Next Steps
