@@ -3,8 +3,10 @@
 #### Maalvika Bhat, Hyunkyung Rho
 
 ### Abstract
+Colonies of the ant (Temnothorax Albipennis) can collectively choose the best of several nest sites, even when many of the active ants who organize the move visit only one site. Previous studies have suggested that this ability stems from the ants’ strategy of graded commitment to a potential home. On finding a site, an ant proceeds from independent assessment, to recruiting fellow active ants via slow tandem runs, to bringing the passive bulk of the colony via rapid transports. Assessment duration varies inversely with site quality, and the switch from tandem runs to transports requires that a quorum of ants first be summoned to the site. These rules may generate a collective decision, by creating and amplifying differential population growth rates among sites. We plan to simulate the model laid out in the paper and test the importance of these and other known behavioural rules by incorporating them into an agent-based model. Additionally, we want to create a visualization to demonstrate how the ants move during the emigration process. 
 
 ### Areas of Concern
+This paper includes several parameters
 
 ### Annotated Bibliography 
 
@@ -18,7 +20,6 @@ The authors of this paper utilize a MIRROR agent-based model in order to achieve
  
 ### Experiment Plan
 
-We plan to implement k-core analysis in our initial experiment to help identify small interlinked core areas on a network. Additionally, we hope to identify a specific growth mechanism. Our final report will also inculde robustness, or the average coreness of each node. We are looking to understand how much effect removing one node would have on the Wikipedia system in its entirety. 
 
 #### This might look like the following: 
 
