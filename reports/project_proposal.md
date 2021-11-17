@@ -21,7 +21,7 @@ The authors of this paper utilize a MIRROR agent-based model in order to achieve
 ### Experiment Plan
 We will model and visualize an ant colony's process of selecting a new nest after the destruction of its current nest. Every active ant that partakes in the colony emigration process is represented as a distinct agent. The decision-making of each agent is divided up into four major phases: exploration, assessment, canvassing and committed. In the first phase, the agent takes off to discover potential new homes. At encounter of a new potential nest, the agent alternates between staying at the site or searching areas in proximity. At canvassing, the agent leads a tandem run from the old nest to the current nest and checks whether it is a successful run in terms of being able to bring other followers. The last committed phase is when the agent returns to the old nest to transport a nestmate. The many states of this model all fall under the aforementioned four major categories and their diagram are shown below. 
 
-![image](https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/ant_states.png)
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/ant_states.png" width="400" height="550">
 
 We find that the project is difficult to achieve in small incremental steps--rather, a big step that would be the implementation of the entirety of the model. However, the additional variation and extension of the model once after completing implementation should be the ideal smaller steps we want to take. There are two areas of variation and extension that we are considering: the inclusion and/or exclusion of some model parameters and the introduction of new environmental events such as blockades in the path. 
 
