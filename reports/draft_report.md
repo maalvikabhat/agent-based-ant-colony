@@ -33,4 +33,4 @@ https://www.researchgate.net/publication/226134851_The_ontogeny_of_the_interacti
 The authors of this paper utilize a MIRROR agent-based model in order to achieve macro behavior of a beehive. The model looks at individual bee behavior by location, and from previous interactions with other bees. The model seeks to explore how beehives function and what micro behaviors could explain the beehive behavior. In addition, this model investigates the population of each individual type of bee given that each bee has a different behavior based on its role in the hive. We hope to use some of the insights from this paper in our own visualization of the ant colony.
 
 ### Next Steps
-
+Our immediate next step is to plot the probability of a recruiter performing a transport rather than a tandem run, as a function of the number of workers at the new site on her immediately previous visit there. We will normalize the worker numbers by dividing by total colony population. We will also create a plot that identifies the different stages the ants are at with different symbols and a legend.
