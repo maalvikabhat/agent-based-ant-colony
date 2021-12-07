@@ -10,8 +10,8 @@ We find that this  project is difficult to achieve in small incremental steps --
 
 
 ### Results & Interpretation
-To ensure that we are translating the parameters correctly and on the right track, we have created a graph of estimates of the mean and standard deviation of recruitment time, the duration of a round-trip recruitment journey, as a function of the number of recruitment journeys so far undertaken. 
-[PUT SCREENSHOT HERE] 
+To ensure that we are translating the parameters correctly and on the right track, we are working on creating a graph of estimates of the mean and standard deviation of recruitment time, the duration of a round-trip recruitment journey, as a function of the number of recruitment journeys so far undertaken. 
+
 Next, we plan to plot the probability of a recruiter performing a transport rather than a tandem run, as a function of the number of workers at the new site on her immediately previous visit there. The worker numbers are normalized by dividing by total colony population. We will also create a plot that identifies the different stages the ants are at with different symbols and a legend. It should look something like this.
 
 <img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/253176697_2983341461929021_3787379295825093977_n.jpg" width="400" height="550">
