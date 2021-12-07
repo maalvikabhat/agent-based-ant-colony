@@ -12,17 +12,17 @@ We find that this  project is difficult to achieve in small incremental steps --
 ### Results & Interpretation
 Our first task was to visualize how ants' nests become populated over time. In the image below, you can see how different locations are being populated by the ants at different rates. The red line identifies the growing colony that the ant has identified as a good future home. The other locations are shown to lessen in population as the ants are emigrating.
 
-<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/nest_population_over_time.png">
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/nest_population_over_time.png">
 
 To ensure that we are translating the parameters correctly and on the right track, we are working on creating a graph of estimates of the mean and standard deviation of recruitment time, the duration of a round-trip recruitment journey, as a function of the number of recruitment journeys so far undertaken. 
 
 Next, we plan to plot the probability of a recruiter performing a transport rather than a tandem run, as a function of the number of workers at the new site on her immediately previous visit there. The worker numbers are normalized by dividing by total colony population. We will also create a plot that identifies the different stages the ants are at with different symbols and a legend. It should look something like this.
 
-<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/253176697_2983341461929021_3787379295825093977_n.jpg" width="400" height="550">
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/ant_colony_over_time.png"" width="400" height="550">
 
 Finally, we will create a simulation with ants moving around a square to demonstrate the emigration process visually. 
 
-<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/256168034_956707494925267_2335244230622024383_n.jpg" width="400" height="550">
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/ant_simulation.png"" width="400" height="550">
 
 ### Potential Causes for Concern
 Our largest area of concern is still the scope of the project. With the abundance of parameters presented in the original paper, we are concerned we will accidentally model a portion of the process incorrectly which would cause our results to vary greatly. Also, missing any single parameter would change the model entirely. Nevertheless, we hope to preserve the integrity of the model from the paper. We will accomplish this by starting with the most significant parameters and translating the information presented in the graph into a precise finite state machine. To check, we want to see the results we produce aligning up with the graphs presented in the paper. As we are translating parameters and coding, we are making sure to check each other's work to avoid missing anything. 
