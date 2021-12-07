@@ -22,6 +22,7 @@ Finally, we will create a simulation with ants moving around a square to demonst
 
 ### Potential Causes for Concern
 Our largest area of concern is still the scope of the project. With the abundance of parameters presented in the original paper, we are concerned we will accidentally model a portion of the process incorrectly which would cause our results to vary greatly. Also, missing any single parameter would change the model entirely. Nevertheless, we hope to preserve the integrity of the model from the paper. We will accomplish this by starting with the most significant parameters and translating the information presented in the graph into a precise finite state machine. To check, we want to see the results we produce aligning up with the graphs presented in the paper. As we are translating parameters and coding, we are making sure to check each other's work to avoid missing anything. 
+Another concern is that the paper itself acknowledges how the experiment fails to capture variance in colony performance. We are unsure of how this will affect our experiment and the results we hope to see. 
 
 ### Annotated Bibliography 
 - An agent-based model of collective nest choice by the ant Temnothorax albipennis
