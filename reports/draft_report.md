@@ -12,7 +12,7 @@ We find that this  project is difficult to achieve in small incremental steps --
 ### Results & Interpretation
 Our first task was to visualize how ants' nests become populated over time. In the image below, you can see how different locations are being populated by the ants at different rates. The red line identifies the growing colony that the ant has identified as a good future home. The other locations are shown to lessen in population as the ants are emigrating.
 
-<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/nest_population_over_time.png" width="400" height="300">
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/nest_population_over_time.png">
 
 To ensure that we are translating the parameters correctly and on the right track, we are working on creating a graph of estimates of the mean and standard deviation of recruitment time, the duration of a round-trip recruitment journey, as a function of the number of recruitment journeys so far undertaken. 
 
