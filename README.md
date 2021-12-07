@@ -1,2 +1,2 @@
 # agent-based-ant-colony
-An agent-based model of collective nest choice by the ant (Temnothorax albipennis) 
+An agent-based model of the emigration process of ants, specifically collective nest choice by the ant 
