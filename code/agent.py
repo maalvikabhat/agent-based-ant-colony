@@ -2,22 +2,6 @@ from mesa import Agent
 import numpy as np
 import math
 
-# TODO: fix "AttributeError: 'NoneType' object has no attribute 'settle'"
-'''
-File "C:/Users/hrho/Desktop/OlinCourses/ComplexityScience/agent-based-ant-colony/code/agent.py", line 183, in step
-    self.new_nest.settle(self)
-AttributeError: 'NoneType' object has no attribute 'settle'
-
-
-  File "C:\Users\hrho\Desktop\OlinCourses\ComplexityScience\agent-based-ant-colony\code\agent.py", line 127, in tandem_move
-    self.model.grid.move_agent(self, final_candidates[0])
-  File "C:\Miniconda3\lib\site-packages\mesa\space.py", line 414, in move_agent
-    self._remove_agent(agent.pos, agent)
-  File "C:\Miniconda3\lib\site-packages\mesa\space.py", line 560, in _remove_agent
-    self.grid[x][y].remove(agent)
-ValueError: list.remove(x): x not in list
-'''
-
 def get_distance(pos_1, pos_2):
     """ Get the distance between two point
 
@@ -92,6 +76,7 @@ class Ant(Agent):
         self.new_nest = None
         self.original_nest = nest
         self.leading_ant = None
+        self.in_tandem = False
         self.moore = moore
 
     def get_item(self, item):
@@ -134,6 +119,7 @@ class Ant(Agent):
 
         if len(final_candidates) != 0:
             self.model.grid.move_agent(self, final_candidates[0])
+            self.pos = final_candidates[0]
             return self.pos == self.new_nest.pos
         
         else:
@@ -145,20 +131,27 @@ class Ant(Agent):
         '''
         Ant: ant that leads the tandem run
         '''
-        # make move that moves in Ant's direction
-        leading_ant = Ant.pos
-        next_move = list(self.pos)
-        if self.pos[0] < leading_ant[0]:
-            next_move[0] += 1
-        else:
-            next_move[0] -= 1
+        # Get neighborhood within vision
+        neighbors = self.model.grid.get_neighborhood(self.pos, self.moore, True)
 
-        if self.pos[1] < leading_ant[1]:
-            next_move[1] += 1
-        else:
-            next_move[1] -= 1
+        # Narrow down to the nearest ones to home
+        min_dist = min([get_distance(Ant.pos, pos) for pos in neighbors])
+        final_candidates = [
+            pos for pos in neighbors if get_distance(Ant.pos, pos) == min_dist
+        ]
+        self.random.shuffle(final_candidates)
+
+        if len(final_candidates) != 0:
+            self.model.grid.move_agent(self, final_candidates[0])
+            # TODO: AttributeError: 'NoneType' object has no attribute 'pos'
+            if Ant.pos == Ant.new_nest.pos:
+                self.model.grid.move_agent(self, Ant.pos)
+            return self.pos == Ant.new_nest.pos
         
-        self.model.grid.move_agent(self, tuple(next_move))
+        else:
+            self.state = "Exploration"
+            self.random_move()
+            return True
 
     def step(self):
         if self.state == "Exploration":
@@ -201,6 +194,7 @@ class Ant(Agent):
 
             if nest != self.original_nest and nest is not None and not nest.settled:  
                 self.state = "Committed"
+                self.new_nest = nest
                 self.original_nest.leave(self)
                 self.new_nest.settle(self)
                 return
@@ -240,7 +234,6 @@ class Ant(Agent):
 
             # if tandem run complete
             if done:
-
                 # re-evaluate site
                 if self.flip((1 - self.new_nest.reject) * self.new_nest.time):
                     # move to committed 
@@ -259,16 +252,22 @@ class Ant(Agent):
         
 
         elif self.state == "Committed":
-            # given certain probabiity
-            if self.flip(1 - self.new_nest.transfer):
-                # recruit
-                self.pos = self.original_nest.pos
-                self.tandem_move()
-     
-            else: 
-                # enter exploration phase
-                # but the nest is the new nest this time
-                self.state = "Exploration"
-                self.original_nest = self.new_nest
-                self.new_nest = None
-                self.random_move()
+            if self.in_tandem:
+                done = self.tandem_move()
+                if done: 
+                    self.in_tandem = False
+
+            else:
+                # given certain probabiity
+                if self.flip(1 - self.new_nest.transfer):
+                    # recruit
+                    self.model.grid.move_agent(self, self.original_nest.pos)
+                    self.in_tandem = True
+        
+                else: 
+                    # enter exploration phase
+                    # but the nest is the new nest this time
+                    self.state = "Exploration"
+                    self.original_nest = self.new_nest
+                    self.new_nest = None
+                    self.random_move()

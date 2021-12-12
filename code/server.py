@@ -16,6 +16,8 @@ def portrayal(agent):
     if type(agent) is Ant:
         if agent.state == "Canvassing" or agent.state == "Committed":
             portrayal["Shape"] = "ant_tandem.png"
+        elif agent.state == "Follow":
+            portrayal["Shape"] = "ant_follow.png"
         else:
             portrayal["Shape"] = "ant.png"
         portrayal["scale"] = 0.9

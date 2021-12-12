@@ -23,7 +23,7 @@ class AntWorld(Model):
         nestloc = (25, 25)
         nest_locs = ((22, 11), (35, 8), (18, 33))
 
-        self.startnest = Nest(self.next_id(), nestloc, [], 0.5, 0.5, 0.5, self)
+        self.startnest = Nest(self.next_id(), nestloc, [], 0.2, 0.7, 0.7, self)
         self.nests = [self.startnest]
         self.grid.place_agent(self.startnest, nestloc)
         self.schedule.add(self.startnest)
