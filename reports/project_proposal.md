@@ -21,7 +21,7 @@ The authors of this paper utilize a MIRROR agent-based model in order to achieve
 ### Experiment Plan
 We will model and visualize an ant colony's process of selecting a new nest after the destruction of its current nest. Every active ant that partakes in the colony emigration process is represented as a distinct agent. The decision-making of each agent is divided up into four major phases: exploration, assessment, canvassing and committed. In the first phase, the agent takes off to discover potential new homes. At encounter of a new potential nest, the agent alternates between staying at the site or searching areas in proximity. At canvassing, the agent leads a tandem run from the old nest to the current nest and checks whether it is a successful run in terms of being able to bring other followers. The last committed phase is when the agent returns to the old nest to transport a nestmate. The many states of this model all fall under the aforementioned four major categories and their diagram are shown below. 
 
-<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/ant_states.png" width="400" height="550">
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/ant_states.png" width="400" height="550">
 
 We find that the project is difficult to achieve in small incremental steps--rather, a big step that would be the implementation of the entirety of the model. However, the additional variation and extension of the model once after completing implementation should be the ideal smaller steps we want to take. There are two areas of variation and extension that we are considering: the inclusion and/or exclusion of some model parameters and the introduction of new environmental events such as blockades in the path. 
 
@@ -30,19 +30,19 @@ We find that the project is difficult to achieve in small incremental steps--rat
 We will create a similar graph of estimates of the mean and standard deviation of recruitment time, the duration of a round-trip recruitment journey, as a function of the
 number of recruitment journeys so far undertaken. This will help us ensure we are on the correct track and translating the parameters accurately.
 
-![image](https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/normalizednest.PNG)
+![image](https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/normalizednest.PNG)
 
 Next, we will plot the probability of a recruiter performing a transport rather than a tandem run, as a function of the number of workers at the new site on her immediately previous visit there. The worker numbers are normalized by dividing by total colony population. 
 
-![image](https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/recnumber.PNG)
+![image](https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/recnumber.PNG)
 
 We will create a plot that identifies the different stages the ants are at with different symbols and a legend. It should look something like this.
 
-<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/253176697_2983341461929021_3787379295825093977_n.jpg" width="400" height="550">
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/ant_colony_over_time.jpg" width="400" height="550">
 
 Finally, we will create a simulation with ants moving around a square to demonstrate the emigration process visually. 
 
-<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/256168034_956707494925267_2335244230622024383_n.jpg" width="400" height="550">
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/ant_simulation.jpg" width="400" height="550">
 
 #### Related Implementations By Others
 - **A port of the ants simulation to Mesa agent-based modeling framework in Python** </br>
