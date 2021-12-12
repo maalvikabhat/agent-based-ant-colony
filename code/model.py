@@ -5,7 +5,7 @@ from mesa.space import MultiGrid
 from agent import Ant, Nest
 
 class AntWorld(Model):
-    def __init__(self, height=50, width=50):
+    def __init__(self, height=100, width=100):
         super().__init__()
 
         # Set up the grid and schedule.
@@ -32,6 +32,7 @@ class AntWorld(Model):
         # Need to do this first, or it won't affect the cells, consequence of SimultaneousActivation
         for i in range(100):
             ant = Ant(self.next_id(), self.startnest, self)
+            self.startnest.ants.append(ant)
             self.grid.place_agent(ant, self.startnest.pos)
             self.schedule.add(ant)
 
@@ -56,7 +57,7 @@ class AntWorld(Model):
         Have the scheduler advance each cell by one step
         """
         self.schedule.step()
-        self.dc.collect(self)
+        # self.dc.collect(self)
 
 
         # TODO: stop when all the nests are visited

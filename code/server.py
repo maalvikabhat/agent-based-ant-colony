@@ -5,6 +5,8 @@ from mesa.visualization.UserParam import UserSettableParameter
 from model import AntWorld
 from agent import Ant, Nest
 
+import math
+
 def portrayal(agent):
     if agent is None:
         return
@@ -12,7 +14,10 @@ def portrayal(agent):
     # derived from sugarscape and schelling
     portrayal = {}
     if type(agent) is Ant:
-        portrayal["Shape"] = "ant.png"
+        if agent.state == "Canvassing" or agent.state == "Committed":
+            portrayal["Shape"] = "ant_tandem.png"
+        else:
+            portrayal["Shape"] = "ant.png"
         portrayal["scale"] = 0.9
         portrayal["Layer"] = 1
     # elif type(agent) is Home:
@@ -25,11 +30,11 @@ def portrayal(agent):
     #     portrayal["text_color"] = "black"
     elif type(agent) is Nest:
         portrayal["Shape"] = "circle"
-        portrayal["r"] = 2
+        portrayal["r"] = 1 + math.log(1 + agent.count_ants())
         portrayal["Filled"] = "true"
         portrayal["Layer"] = 3
         portrayal["Color"] = "#964B00BB"
-        portrayal["text"] = len(agent.ants)
+        portrayal["text"] = agent.count_ants()
         portrayal["text_color"] = "white"
 
         # Calculate the amount of red we want
