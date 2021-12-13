@@ -77,6 +77,7 @@ class Ant(Agent):
         self.original_nest = nest
         self.leading_ant = None
         self.in_tandem = False
+        self.count = 4
         self.moore = moore
 
     def get_item(self, item):
@@ -143,11 +144,17 @@ class Ant(Agent):
 
         if len(final_candidates) != 0:
             self.model.grid.move_agent(self, final_candidates[0])
+
             # TODO: AttributeError: 'NoneType' object has no attribute 'pos'
+            if Ant.pos is None:
+                print("Ant is none")
+            if Ant.new_nest is None:
+                print("Ant new nest is none")
+
             if Ant.pos == Ant.new_nest.pos:
                 self.model.grid.move_agent(self, Ant.pos)
             return self.pos == Ant.new_nest.pos
-        
+  
         else:
             self.state = "Exploration"
             self.random_move()
@@ -233,7 +240,7 @@ class Ant(Agent):
             done = self.tandem_move()
 
             # if tandem run complete
-            if done:
+            if done and self.count == 0:
                 # re-evaluate site
                 if self.flip((1 - self.new_nest.reject) * self.new_nest.time):
                     # move to committed 
@@ -249,13 +256,16 @@ class Ant(Agent):
                     self.state = "Exploration"
                     self.random_move()
                     return
-        
+            self.count -= 1
 
         elif self.state == "Committed":
             if self.in_tandem:
                 done = self.tandem_move()
-                if done: 
+                if done and self.count == 0: 
                     self.in_tandem = False
+                    self.count = 4
+                    return
+                self.count -= 1
 
             else:
                 # given certain probabiity
