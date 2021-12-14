@@ -60,5 +60,5 @@ model_params = {
 server = ModularServer(
     AntWorld, [canvas_element], "Ants", model_params
 )
-server.port = 8521 # The default
+server.port = 8521 # this is the default
 server.launch()
