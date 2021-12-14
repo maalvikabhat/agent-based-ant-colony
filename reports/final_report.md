@@ -14,8 +14,7 @@ Our first task was to visualize how ants' nests become populated over time. In t
 
 <img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/nest_population_over_time.png">
 
-
-Finally, we created a simulation with ants moving around a square to demonstrate the emigration process visually. 
+Finally, we created a simulation with ants moving around a square to demonstrate the emigration process visually. Below are 
 
 
 ### Areas of Concern
