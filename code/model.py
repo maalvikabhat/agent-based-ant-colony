@@ -19,9 +19,9 @@ class AntWorld(Model):
         # Use a simple grid, where edges wrap around.
         self.grid = MultiGrid(height, width, torus=True)
         
-        # Define pos for the initial nest(home) and nest locations
+        # Define pos for the initial nest(home) 
         nestloc = (25, 25)
-        nest_locs = ((22, 11), (35, 8), (18, 33))
+        nest_locs = ((22, 11), (35, 8), (18, 33)) # define nest locations
 
         self.startnest = Nest(self.next_id(), nestloc, [], 0.2, 0.7, 0.7, self)
         self.nests = [self.startnest]
