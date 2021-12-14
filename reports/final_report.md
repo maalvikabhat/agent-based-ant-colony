@@ -6,6 +6,7 @@ Colonies of the ant (Temnothorax Albipennis) can collectively choose the best of
 
 ### Experiment
 We have modeled and visualized an ant colony's process of selecting a new nest after the destruction of its current nest. Every active ant that partakes in the colony emigration process is represented as a distinct agent. The decision-making of each agent is divided up into four major phases: exploration, assessment, canvassing, and commitment. In the first phase, the agent takes off to discover potential new homes. This is the exploration phase, and is referred to as such in the comments of our code. At encounter of a new potential nest, the agent alternates between staying at the site or searching areas in proximity. This is known as the second phase -- the assessment phase. At canvassing, the agent leads a tandem run from the old nest to the current nest and checks whether it is a successful run in terms of being able to bring other followers. The last phase is Commitment, when the agent returns to the old nest to transport a nestmate. 
+
 We find that this  project is difficult to achieve in small incremental steps -- rather, a big step that would be the implementation of the entirety of the model works better. However, the additional variation and extension of the model once after completing implementation should be the ideal smaller steps we want to take. Our variation and extension is the inclusion and/or exclusion of some model parameters. 
 
 
@@ -14,9 +15,21 @@ Our first task was to visualize how ants' nests become populated over time. In t
 
 <img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/nest_population_over_time.png">
 
-We modeled each of the four steps in the ants' emigration process -- exploration, assessment, canvassing, and commitment.
+We modeled each of the four steps in the ants' emigration process -- exploration, assessment, canvassing, and commitment. In the exploration phase, the ant first looks for a nest. If a potential nest is found and accepted, the model moves to the next phase. Otherwise, we use self.random_move() to make the ant move to a nearby square. The next phase is assessment. Here, if the ant temporarily accepts the nest, then is moved to a tandem run. The tandem run is the canvassing phase but is referred to as the tandem run in our model. Every time the ant reaches the assessment phase, it chooses between staying and exploring. If the ant chooses to stay, our algorithm increases the time. If the ant chooses to explore, the algorithm makes the ant move to a nearby square. The nest phase is the tandem run phase, also known as canvassing. This is when the ant explores the potential nest with another ant. If the second ant also agrees to the new nest, then we move to the next phase: committment. If the second ant does not accept the nest, then the first ant moves back to a new square. The second ant disappears in our current model. If the second ant also accepts this new nest, the ants move into the nest. 
 
-Finally, we created a simulation with ants moving around a square to demonstrate the emigration process visually. Below are 
+Finally, we created a simulation with ants moving around a square to demonstrate the emigration process visually. Below are gifs of the emigration process with different nest locations.  
+
+Nest locations (): 
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/.png">
+
+Nest locations (): 
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/.png">
+
+Nest locations (): 
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/.png">
+
+Nest locations (): 
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/.png">
 
 
 ### Areas of Concern
