@@ -156,7 +156,7 @@ class Ant(Agent):
             return self.pos == Ant.new_nest.pos
   
         else:
-            self.state = "Exploration"
+            self.state = "Exploration" # moves to exploration state 
             self.random_move()
             return True
 
@@ -182,7 +182,7 @@ class Ant(Agent):
                 
                 # if the nest is accepted
                 if self.flip((1 - nest.reject) * nest.time):
-                    self.state = "Assessment"
+                    self.state = "Assessment" # moves to assessment state
                     self.new_nest = nest
 
                 # if the nest is not accepted keep searching
