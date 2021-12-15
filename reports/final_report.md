@@ -21,19 +21,19 @@ Our first task was to visualize how ants' nests become populated over time. In t
 
 We modeled each of the four steps in the ants' emigration process -- exploration, assessment, canvassing, and commitment. In the exploration phase, the ant first looks for a nest. If a potential nest is found and accepted, the model moves to the next phase. Otherwise, we use randomly make the ant move to a nearby square. The next phase is assessment. Here, if the ant temporarily accepts the nest, then is moved to a tandem run. The tandem run is the canvassing phase but is referred to as the tandem run in our model. Every time the ant reaches the assessment phase, it chooses between staying and exploring. If the ant chooses to stay, our algorithm increases the time. If the ant chooses to explore, the algorithm makes the ant move to a nearby square. The nest phase is the tandem run phase, also known as canvassing. This is when the ant explores the potential nest with another ant. If the second ant also agrees to the new nest, then we move to the next phase: committment. If the second ant does not accept the nest, then the first ant moves back to a new square. The second ant disappears in our current model. If the second ant also accepts this new nest, the ants move into the nest. To visualize this entire process, we created a simulation with ants moving around a square to demonstrate the emigration process visually. 
 
-Below are gifs of the emigration process with different nest locations.  
+Below are gifs of the emigration process with different nest locations. You can see that the potential nests closest to the original nest are the most frequented and the most likely to become the new nests. Even after we did a screen wrap, this still seems to be the case.
 
-Nest locations (): 
-<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/.png">
+The gif below shows how, when the original nest is in a central location, the closest nest will be the most frequented. Therefore, it is most likely to become the chosen new nest.
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif2.GIF">
 
-Nest locations (): 
-<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/.png">
+This gif shows how the ants frequent the nest closest. The second most frequented is the furthest, but with screen wrap, it is the second closest. 
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif1.GIF">
 
-Nest locations (): 
-<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/.png">
+All the potential nests in this visualization are rather far from the original nest, so the model times out before the ants are able to choose a new nest. Still, the ants get to the closest two nests the fastest. 
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif3.GIF">
 
-Nest locations (): 
-<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/.png">
+The gif below highlights how the nest which is the closest and easiest to access will have the most ants frequent the location. 
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif4.GIF">
 
 ### Areas of Concern
 Our largest area of concern is the abundance of parameters in the project. We were aware that if we accidentally modeled a portion of the process incorrectly, our results would vary greatly. Also, missing any single parameter would change the model entirely. Nevertheless, we did our best to preserve the integrity of the model from the paper. We accomplished this by starting with the most significant parameters and translating the information presented in the graph into a precise finite state machine. Additionally, as we were translating parameters and coding, we were making sure to check each other's work to avoid missing anything. 
