@@ -23,16 +23,16 @@ We modeled each of the four steps in the ants' emigration process -- exploration
 
 Below are gifs of the emigration process with different nest locations. You can see that the potential nests closest to the original nest are the most frequented and the most likely to become the new nests. Even after we did a screen wrap, this still seems to be the case.
 
-The gif below shows how, when the original nest is in a central location, the closest nest will be the most frequented. Therefore, it is most likely to become the chosen new nest.
+The gif below shows how, when the original nest is in a central location, the closest nest will be the most frequented. Therefore, it is most likely to become the chosen new nest. <br />
 <img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif2.GIF" width="400" height="400"> <br />
 
-This gif shows how the ants frequent the nest closest. The second most frequented is the furthest, but with screen wrap, it is the second closest. 
+This gif shows how the ants frequent the nest closest. The second most frequented is the furthest, but with screen wrap, it is the second closest. <br />
 <img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif1.GIF" width="400" height="400"> <br />
 
-All the potential nests in this visualization are rather far from the original nest, so the model times out before the ants are able to choose a new nest. Still, the ants get to the closest two nests the fastest. 
+All the potential nests in this visualization are rather far from the original nest, so the model times out before the ants are able to choose a new nest. Still, the ants get to the closest two nests the fastest. <br />
 <img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif3.GIF" width="400" height="400"> <br />
 
-The gif below highlights how the nest which is the closest and easiest to access will have the most ants frequent the location. 
+The gif below highlights how the nest which is the closest and easiest to access will have the most ants frequent the location. <br />
 <img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif4.GIF" width="400" height="400"> <br />
 
 ### Areas of Concern
