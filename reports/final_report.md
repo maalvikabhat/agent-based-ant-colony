@@ -23,6 +23,8 @@ We modeled each of the four steps in the ants' emigration process -- exploration
 
 Below are gifs of the emigration process with different nest locations. You can see that the potential nests closest to the original nest are the most frequented and the most likely to become the new nests. Even after we did a screen wrap, this still seems to be the case.
 
+Additionally, for the sake of visualization, the black ants are ants which are exploring, assessing, or committing. The blue ants are ants on tandem runs.
+
 The gif below shows how, when the original nest is in a central location, the closest nest will be the most frequented. Therefore, it is most likely to become the chosen new nest. <br />
 <img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif_1.gif" width="780" height="400"> <br />
 
