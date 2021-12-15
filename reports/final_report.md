@@ -24,7 +24,7 @@ We modeled each of the four steps in the ants' emigration process -- exploration
 Below are gifs of the emigration process with different nest locations. You can see that the potential nests closest to the original nest are the most frequented and the most likely to become the new nests. Even after we did a screen wrap, this still seems to be the case.
 
 The gif below shows how, when the original nest is in a central location, the closest nest will be the most frequented. Therefore, it is most likely to become the chosen new nest. <br />
-<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif_1.gif" width="800" height="400"> <br />
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif_1.gif" width="750" height="400"> <br />
 
 This gif shows how the ants frequent the nest closest. The second most frequented is the furthest, but with screen wrap, it is the second closest. <br />
 <img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif1.GIF" width="400" height="400"> <br />
