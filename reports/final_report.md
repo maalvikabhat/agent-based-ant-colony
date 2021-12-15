@@ -25,16 +25,16 @@ Below are gifs of the emigration process with different nest locations. You can 
 
 Additionally, for the sake of visualization, the black ants are ants which are exploring, assessing, or committing. The blue ants are ants on tandem runs.
 
-The gif below shows how, when the original nest is in a central location, the closest nest will be the most frequented. Therefore, it is most likely to become the chosen new nest. <br />
+The gif below shows how, when the original nest is in a central location, the closest nest will be the most frequented. Therefore, it is most likely to become the chosen new nest. <br /> <br />
 <img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif_1.gif" width="1000" height="500"> <br />
 
-This gif shows how the ants frequent the nest closest. The second most frequented is the furthest, but with screen wrap, it is the second closest. <br />
+This gif shows how the ants frequent the nest closest. The second most frequented is the furthest, but with screen wrap, it is the second closest. <br /> <br />
 <img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif_3.gif" width="1000" height="500"> <br />
 
-All the potential nests in this visualization are rather far from the original nest, so the model times out before the ants are able to choose a new nest. Still, the ants get to the closest two nests the fastest. <br />
+All the potential nests in this visualization are rather far from the original nest, so the model times out before the ants are able to choose a new nest. Still, the ants get to the closest two nests the fastest. <br /> <br />
 <img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif_4.gif" width="1000" height="500"> <br />
 
-The gif below highlights how the nest which is the closest and easiest to access will have the most ants frequent the location. <br />
+The gif below highlights how the nest which is the closest and easiest to access will have the most ants frequent the location. <br /> <br />
 <img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif_2.gif" width="1000" height="500"> <br />
 
 ### Areas of Concern
