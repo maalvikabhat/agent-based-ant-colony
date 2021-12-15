@@ -10,7 +10,7 @@ Group living expands the behavioural complexity of animals, by making possible c
 ### Experiment
 We have modeled and visualized an ant colony's process of selecting a new nest after the destruction of its current nest. Every active ant that partakes in the colony emigration process is represented as a distinct agent. The decision-making of each agent is divided up into four major phases: exploration, assessment, canvassing, and commitment. In the first phase, the agent takes off to discover potential new homes. This is the exploration phase, and is referred to as such in the comments of our code. At encounter of a new potential nest, the agent alternates between staying at the site or searching areas in proximity. This is known as the second phase -- the assessment phase. At canvassing, the agent leads a tandem run from the old nest to the current nest and checks whether it is a successful run in terms of being able to bring other followers. The last phase is Commitment, when the agent returns to the old nest to transport a nestmate. 
 
-Here is a diagram of the steps in our process for an easier visualization.
+Here is a diagram of the steps in our process for an easier visualization. <\br> 
 <img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/Capture.PNG" width ="400" height="420">
 
 We find that this  project is difficult to achieve in small incremental steps -- rather, a big step that would be the implementation of the entirety of the model works better. However, the additional variation and extension of the model once after completing implementation should be the ideal smaller steps we want to take. Our variation and extension is the inclusion and/or exclusion of some model parameters. 
