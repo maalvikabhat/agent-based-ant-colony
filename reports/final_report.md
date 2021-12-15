@@ -24,16 +24,16 @@ We modeled each of the four steps in the ants' emigration process -- exploration
 Below are gifs of the emigration process with different nest locations. You can see that the potential nests closest to the original nest are the most frequented and the most likely to become the new nests. Even after we did a screen wrap, this still seems to be the case.
 
 The gif below shows how, when the original nest is in a central location, the closest nest will be the most frequented. Therefore, it is most likely to become the chosen new nest.
-<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif2.GIF">
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif2.GIF"> <br/>
 
 This gif shows how the ants frequent the nest closest. The second most frequented is the furthest, but with screen wrap, it is the second closest. 
-<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif1.GIF">
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif1.GIF"> <br/>
 
 All the potential nests in this visualization are rather far from the original nest, so the model times out before the ants are able to choose a new nest. Still, the ants get to the closest two nests the fastest. 
-<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif3.GIF">
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif3.GIF"> <br/>
 
 The gif below highlights how the nest which is the closest and easiest to access will have the most ants frequent the location. 
-<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif4.GIF">
+<img src="https://github.com/maalvikabhat/agent-based-ant-colony/blob/main/pictures/gif4.GIF"> <br/>
 
 ### Areas of Concern
 Our largest area of concern is the abundance of parameters in the project. We were aware that if we accidentally modeled a portion of the process incorrectly, our results would vary greatly. Also, missing any single parameter would change the model entirely. Nevertheless, we did our best to preserve the integrity of the model from the paper. We accomplished this by starting with the most significant parameters and translating the information presented in the graph into a precise finite state machine. Additionally, as we were translating parameters and coding, we were making sure to check each other's work to avoid missing anything. 
